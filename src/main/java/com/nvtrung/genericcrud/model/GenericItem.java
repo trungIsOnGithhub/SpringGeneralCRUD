@@ -11,7 +11,6 @@ import jakarta.persistence.Table;
 @Table(name = "generic_item")
 public class GenericItem {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
 	@Column(name = "name")
