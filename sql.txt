@@ -1,2 +1,13 @@
-create database gencrud;
-use gencrud;
+CREATE DATABASE gencrud;
+USE gencrud;
+
+CREATE TABLE `generic_item` (
+	`id` BIGINT NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(255) CHARACTER SET armscii8 COLLATE armscii8_general_ci NOT NULL DEFAULT '',
+	`int_attr` INT,
+	`long_attr` BIGINT,
+	`bool_attr` BOOLEAN,
+	PRIMARY KEY (`id`)
+) ENGINE=InnoDB;
+
+INSERT INTO generic_item(name,int_attr,long_attr,bool_attr) VALUES ('test',12,123456,true);
