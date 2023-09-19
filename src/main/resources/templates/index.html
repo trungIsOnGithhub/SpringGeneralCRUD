@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Generic CRUD App</title>	
+	</head>
+	
+	<body>
+		<div align="center">
+			<table border="1">
+				<thead>
+					<th>Item Name</th>
+					<th>Int Attribute</th>
+					<th>Long Attribute</th>
+					<th>Boolean Attribute</th>
+				</thead>
+				<tbody>
+					
+					<tr th:each="item : ${listItems}">
+						<td th:text=${item.name}></td>
+						<td th:text=${item.intAttribute}></td>
+						<td th:text=${item.longAttribute}></td>
+						<td th:text=${item.boolAttribute}></td>
+					</tr>
+					
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
