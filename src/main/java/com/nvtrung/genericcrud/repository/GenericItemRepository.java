@@ -6,6 +6,4 @@ import org.springframework.stereotype.Repository;
 import com.nvtrung.genericcrud.model.GenericItem;
 
 @Repository
-public interface GenericItemRepository extends JpaRepository<GenericItem, Long> {
-
-}
+public interface GenericItemRepository extends JpaRepository<GenericItem, Long> {}
