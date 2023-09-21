@@ -12,7 +12,7 @@
 <body>
 
     <div class="container my-2">
-        <h1>Employees List</h1>
+        <h1>Items List</h1>
 
         <a th:href="@{/new}" class="btn btn-primary btn-sm mb-3"> Add Employee </a>
 
@@ -39,6 +39,23 @@
 					
 				</tbody>
         </table>
+ 
+	<div th:if="${totalPages > 1}">
+	    <div class="row col-sm-10">
+	        <div class="col-sm-3">
+	            Page: [[${currentPage}]] out of [[${totalPages}]] pages
+	        </div>
+	        <div class="col-sm-2">
+	            <a th:if="${currentPage < totalPages}" th:href="@{'/page/' + ${currentPage + 1}}">Next Page</a>
+	            <a th:if="${currentPage > 1}" th:href="@{'/page/' + ${1}}">Previous Page</a>
+	        </div>
+	
+	        <div class="col-sm-2">
+	            <a th:if="${currentPage < totalPages}" th:href="@{'/page/' + ${totalPages}}">Last Page</a>
+	            <a th:if="${currentPage == totalPages}" th:href="@{'/page/' + ${1}}">First Page</a>
+	        </div>
+	    </div>
+	</div>
     </div>
 </body>
 
